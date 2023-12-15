@@ -4,6 +4,7 @@
     color: white;
 }
 
+
 a {
     text-decoration: none;
     font-weight: bold;
@@ -11,6 +12,7 @@ a {
 
 /* nav */
 nav {
+    flex: 1;
     background: darkcyan;
     height: 50px;
     display: flex;
@@ -28,17 +30,15 @@ nav i {
     margin-left: 20px;
 }
 
-
 /* Container */
 main {
     display: flex;
+    flex: 1.5;
 }
-
 
 /* Menu */
 main .aside-left {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     width: 230px;
@@ -48,7 +48,6 @@ main .aside-left {
 
 main .aside-left .item {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     width: 80%;
     height: 40px;
@@ -64,3 +63,60 @@ main .aside-left .item i {
 main .aside-left .item:hover {
     background: red;
 }
+
+/* category */
+.category{
+    width: 90%;
+    height: 70%;
+    margin: auto;
+    margin-top: 5%;
+}
+.head-category #btn-add{
+    padding: 5px;
+}
+
+#search{
+    width: 200px;
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+}
+#search:hover{
+    width: 400px;
+}
+#btn-add{
+    width: 80px;
+    background:blue;
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+}
+#btn-add:hover{
+    background: #000;
+}
+.head-category{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    /* margin-top: 50px; */
+}
+#add-gategory{
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+tr td:nth-child(3){
+    display: flex;
+    justify-content: space-evenly;
+}
+tr th{
+    background: #000;
+}
+th,td{
+    border: 1px solid grey;
+    padding: 10px;
+} 
+
+
+
+
