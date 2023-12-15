@@ -119,9 +119,7 @@ main .aside-left .item:hover {
     color: black;
     padding: 15px;
     margin-left: 20px;
-    /* font-size: 1.1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem; */
+
 }
 
 .dialog footer {
@@ -140,12 +138,12 @@ main .aside-left .item:hover {
     color: black;
 }
 main .aside-right {
-    width: 1170px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-    /* background: grey; */
+    width: 1170px;
+    
+
 }
 
 main .aside-right .show-items {
@@ -222,9 +220,19 @@ main .aside-right .table-item table td{
 main .aside-right .table-item table tr:nth-child(even){
     background: rgb(217, 218, 214);
 }
-tr .material-icons{
+tr td .material-icons{
     color: red;
+   
 }
+tr td .material-icons:nth-child(2){
+    margin-right: 10px;
+    margin-left: 10px;
+    color: blue;
+}
+tr td .material-icons:nth-child(3){
+    color: black;
+}
+
 
 
   
