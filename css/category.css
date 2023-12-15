@@ -3,15 +3,14 @@
     margin: 0;
     color: white;
 }
-
-a {
+a{
     text-decoration: none;
     font-weight: bold;
 }
 
-/* nav */
+
 nav {
-    background: darkcyan;
+    background: teal;
     height: 50px;
     display: flex;
     align-items: center;
@@ -28,27 +27,23 @@ nav i {
     margin-left: 20px;
 }
 
-
-/* Container */
 main {
     display: flex;
+    background: rgb(255, 255, 255);
 }
 
-
-/* Menu */
 main .aside-left {
     display: flex;
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     width: 230px;
-    height: 570px;
-    background: black;
+    height: 100vh;
+    background: rgb(0, 0, 0);
 }
 
 main .aside-left .item {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     width: 80%;
     height: 40px;
@@ -64,3 +59,87 @@ main .aside-left .item i {
 main .aside-left .item:hover {
     background: red;
 }
+
+main .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1170px;
+    height: 100%;
+}
+main .category .head-category{
+    display: flex;
+    justify-content: space-between;
+    width: 77%;
+    margin-top: 30px;
+}
+main .category .head-category #btn-add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 45px;
+    background: blue;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    gap: 10px;
+
+}
+
+main .category .head-category input{
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+main .category .head-category input:hover{
+    width: 400px;
+    /* text-align: center; */
+}
+
+
+main .category .table-item {
+    width: 77%;
+    height: 100%;
+    margin-top: 50px;
+}
+
+main .category .table-item h1 {
+    color: black;
+}
+
+main .category .table-item table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+main .category .table-item table th{
+    padding: 15px;
+    background: teal;
+    color: white;
+    border: 2px solid white;
+}
+main .category .table-item table td{
+    text-align: center;
+    padding: 15px;
+    color: black;
+    font-weight: bold;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+/* main .aside-right .table-item table tr:nth-child(even){
+    background: rgb(195, 228, 240);
+} */
+main .category .table-item table tr:nth-child(even){
+    background: rgb(217, 218, 214);
+}
+/* main .aside-right .table-item table td {
+    text-align: left;
+} */
+  
+
+
+
+

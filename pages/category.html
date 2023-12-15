@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>categories</title>
-    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/category.css">
     <script src="../JS/category.js" defer></script>
 </head>
 
@@ -16,7 +18,6 @@
         <i class="fa fa-cart-plus fa-lg"></i>
         <h4>POS SYSTEM</h4>
     </nav>
-
     <main>
         <div class="aside-left">
             <div class="item">
@@ -44,5 +45,61 @@
                 </a>
             </div>
         </div>
+        <div class="category">
+            <div class="head-category">
+                <button id="btn-add"><span class="material-symbols-outlined">add</span> Add Category</button>
+                <input type="search" name="" id="search" placeholder="search category here">
+            </div>
+            <div id="category-dialog" style="display:none">
+                <div class="dialog-add">
+                    <header>Add new New Category</header>
+                    <section>
+                        <div class="itemCreate">
+                            <label for="idcategory">Category ID: </label>
+                            <input id="idcategory" type="text" placeholder=" input category id">
+                        </div>
+                        <div class="itemCreate">
+                            <label for="Category Name">Category Name: </label>
+                            <input id="Category Name" type="text" placeholder="In put Category Name">
+                        </div>
+                        <div class="ActionitemCreate">
+                            <label for="">Action: </label>
+                            <input id="Action" type="number" placeholder="Action">
+                        </div>
+                    </section>
+                    <footer>
+                        <button id="cancell" onclick="Oncancell()">Cancel</button>
+                        <button id="create" onclick="Oncreate()">Creat</button>
+                    </footer>
+                </div>
+            </div>
+            <div class="table-item">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Category Name</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>UEHFU</td>
+                            <td>UEHFU</td>
+                            <td>UEHFU</td>
+                        </tr>
+                        <tr>
+                            <td>UEHFU</td>
+                            <td>UEHFU</td>
+                            <td>UEHFU</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
     </main>
+
 </body>
+
+</html>
