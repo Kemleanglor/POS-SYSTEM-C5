@@ -50,6 +50,29 @@
                 <button id="btn-add"><span class="material-symbols-outlined">add</span></button>
                 <input type="search" name="" id="search" placeholder="search category here">
             </div>
+            <div id="category-dialog" style="display:none">
+                <div class="dialog-add">
+                    <header>Add new New Category</header>
+                    <section>
+                        <div class="itemCreate">
+                            <label for="idcategory">Category ID: </label>
+                            <input id="idcategory" type="text" placeholder=" input category id">
+                        </div>
+                        <div class="itemCreate">
+                            <label for="Category Name">Category Name: </label>
+                            <input id="Category Name" type="text" placeholder="In put Category Name">
+                        </div>
+                        <div class="ActionitemCreate">
+                            <label for="">Action: </label>
+                            <input id="Action" type="number" placeholder="Action">
+                        </div>
+                    </section>
+                    <footer>
+                        <button id="cancell" onclick="Oncancell()">Cancel</button>
+                        <button id="create" onclick="Oncreate()">Creat</button>
+                    </footer>
+                </div>
+            </div>
             <table id="add-gategory">
                 <thead>
                     <tr>
@@ -58,7 +81,13 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    <tr>
+                        <td>UEHFU</td>
+                        <td>UEHFU</td>
+                        <td>UEHFU</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
         </div>
