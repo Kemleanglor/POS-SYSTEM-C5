@@ -1,19 +1,18 @@
 * {
     padding: 0;
     margin: 0;
-    /* color: white; */
+    color: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-
-
 a {
     text-decoration: none;
     font-weight: bold;
 }
 
-/* nav */
+/* ----------nav--------- */
+
 nav {
-    flex: 1;
-    background: darkcyan;
+    background: teal;
     height: 50px;
     display: flex;
     align-items: center;
@@ -26,26 +25,23 @@ h4 {
 
 nav i {
     font-size: larger;
-    /* color: rgb(255, 255, 255); */
     margin-left: 20px;
 }
 
-/* Container */
+/* -------------main------------- */
+
 main {
     display: flex;
-    flex: 1.5;
+    background: rgb(255, 255, 255);
 }
-
-/* Menu */
 main .aside-left {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 230px;
-    height: 570px;
-    background: black;
+    height: 100vh;
+    background: rgb(0, 0, 0);
 }
-
 main .aside-left .item {
     display: flex;
     align-items: center;
@@ -53,163 +49,73 @@ main .aside-left .item {
     height: 40px;
     margin-top: 30px;
     gap: 25px;
-
 }
-
 main .aside-left .item i {
     margin-left: 20px;
 }
-
 main .aside-left .item:hover {
     background: red;
 }
+/* ----------category----- */
 
-/* category */
-.category{
-    width: 90%;
-    height: 70%;
-    margin: auto;
-    margin-top: 5%;
-}
-.head-category #btn-add{
-    padding: 5px;
+main .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1170px;
+    height: 100%;
 }
 
-#search{
-    width: 200px;
-    border-radius: 5px 5px 5px 5px;
-    text-align: center;
-}
-#search:hover{
-    width: 400px;
-}
-#btn-add{
-    width: 80px;
-    background:blue;
-    border: none;
-    border-radius: 3px 3px 3px 3px;
-}
-#btn-add:hover{
-    background: #000;
-}
-.head-category{
+main .category .head-category {
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    margin: auto;
-    margin-top: 50px;
-}
-#add-gategory{
-    border-collapse: collapse;
-    border: 1px solid grey;
-    width: 90%;
-    margin: auto;
-    margin-top: 20px;
-    color: #000;
+    width: 77%;
+    margin-top: 40px;
 }
 
-
-
-/*  show add */
-
-#category-dialog {
-    position: fixed;
-    height: 80vh;
-    width: 70%;
-    margin: auto;
-    /* top: 0;
-    left: 0; */
-    background-color: rgba(128, 128, 128, 0.288);
-    /* z-index: 10; */
-}
-
-.dialog-add {
-    position: fixed;
-    top: 10vh;
-    left: 20%;
-    width: 60%;
-    z-index: 100;
-    border-radius: 12px;
-    border: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
-
-.dialog-add header {
-    background-color: blue;
-    color: white;
-    font-size: 1.25rem;
-    width: 100%;
-    padding: 1rem;
-}
-
-.dialog-add section {
-    padding: 1rem;
-}
-.dialog-add section .itemCreate{
+main .category .head-category #btn-add {
     display: flex;
-    margin-top: 20px;
-}
-
-.dialog .itemCreate label {
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 45px;
+    background: blue;
+    border-radius: 10px;
+    border: none;
     font-weight: bold;
-    display: block;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    width: 80px;
+    /* gap: 10px; */
+
 }
 
-.dialog-add section .iitemCreate input {
-    display: block;
-    width: 90%;
-    border: 1px solid #ccc;
-    color: black;
-    padding: 15px;
-    margin-left: 20px;
+main .category .head-category input {
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
 }
 
-.dialog-add footer {
-    padding: 10px;
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
+main .category .head-category input:hover {
+    width: 400px;
 }
 
-#cancell,
-#create{
-    width: 80px;
-    background:blue;
-    border: none;
-}
-#cancell:hover{
-    background:red;
-}
-
-main .aside-right #add-gategory {
+main .category .table-item {
     width: 77%;
     height: 100%;
     margin-top: 50px;
 }
-
-/* main .aside-right .table-item h1 {
-    color: black;
-} */
-
-main .aside-right #add-gategory table {
+main .category .table-item table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
 }
-main .aside-right #add-gategory table th{
+main .category .table-item table th {
     padding: 15px;
     background: teal;
     color: white;
     border: 2px solid white;
 }
-main .aside-right #add-gategory table td{
+main .category .table-item table td {
     text-align: center;
     padding: 15px;
     color: black;
@@ -218,10 +124,75 @@ main .aside-right #add-gategory table td{
     border-bottom: 2px solid white;
 }
 
-main .aside-right #add-gategory table tr:nth-child(even){
+main .category .table-item table tr:nth-child(even) {
     background: rgb(217, 218, 214);
 }
 
+/* ---------daiolog------- */
+#category-dialog {
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
 
+.dialog-add {
+    position: fixed;
+    top: 10vh;
+    left: 40%;
+    width: 40%;
+    height: 50vh;
+    z-index: 100;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    margin-top: 90px;
+    overflow: hidden;
+    background:wheat;
+}
 
+.dialog-add header {
+    width: 100%;
+    color: white;
+    border-radius: 5px 0 5px 0;
+    font-size: 1.25rem;
+    padding: 1rem;
+    background: #000;
+}
 
+.dialog-add section {
+    padding: 20px;
+    margin-left: 25px;
+}
+section .itemCreate{
+    padding:10px;
+}
+
+section .itemCreate input{
+    width: 400px;
+    padding:6px;
+    margin-top: 5px;
+}
+footer{
+    display: flex;
+    margin-left: auto;
+    margin-right: 60px;
+}
+footer,
+#cancell,
+#create{
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+#cancell,
+#create{
+    background: blue;
+}
+footer,
+#cancell{
+    margin-right: 20%;
+}
