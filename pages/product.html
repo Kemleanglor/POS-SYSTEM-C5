@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/pround.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="js/product.js" defer></script>
+    <script src="../JS/product.js" defer></script>
 </head>
 
 <body>
@@ -44,5 +44,63 @@
                 </a>
             </div>
         </div>
+        <div id="product-dialog" style="display:none">
+            <div class="dialog">
+                <header>Add new Product</header>
+                <section>
+                    <div class="input-item">
+                        <label for="name">Name: </label>
+                        <input id="name" type="text" placeholder="Name Product">
+                    </div>
+                    <div class="input-item">
+                        <label for="Category">Category: </label>
+                        <input id="category" type="text" placeholder="Name Category">
+                    </div>
+                    <div class="input-item">
+                        <label for="">Quanity: </label>
+                        <input id="quanity" type="number" placeholder="Quanity Product">
+                    </div>
+                    <div class="input-item">
+                        <label for="">Price: </label>
+                        <input id="unit-price" type="number" placeholder="Unit Price">
+                    </div>
+                </section>
+                <footer>
+                    <button onclick="cancel()">Cancel</button>
+                    <button onclick="addProduct()">Add</button>
+                </footer>
+            </div>
+        </div>
+        <div class="aside-right">
+            <div class="show-items">
+                <div class="add-product">
+                    <div class="add-item-icon">
+                        <i class="fa fa-plus"></i>
+                        <button id="add-product">Add Product</button>
+                    </div>
+                </div>
+            </div>
+            <div class="table-item">
+                <table>
+                    <thead> 
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Quanity</th>
+                            <th>Unit Price</th>
+                            <th>Total Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
     </main>
 </body>
