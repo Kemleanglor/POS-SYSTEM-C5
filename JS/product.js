@@ -142,3 +142,4 @@ let productData = {
 }
 btn.addEventListener("click", btnAddproduct)
 getProducts()
+
