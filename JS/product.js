@@ -30,6 +30,7 @@ function addProduct() {
         return;
     }
 
+
     let productId = productData.lastestId;
     if (productId === null || productData.products.length === 0) {
         productId = 1;
@@ -84,9 +85,11 @@ function getProducts() {
         let iconvisit = document.createElement("i");
         icondelete.classList.add("material-icons");
         icondelete.textContent="delete";
+        icondelete.addEventListener("click",deleteProduct)
 
         iconedit.classList.add("material-icons");
         iconedit.textContent = "edit";
+      
 
         iconvisit.classList.add("material-icons");
         iconvisit.textContent = "visibility";
@@ -103,7 +106,6 @@ function getProducts() {
         tdQuanity.textContent = data.quanity;
         tdUnitprice.textContent = data.price;
         tdTotbalprice.textContent = parseInt(data.quanity)*parseInt(data.price);
-        // tdAction.textContent = "Hello world";
 
         tRows.appendChild(tdId);
         tRows.appendChild(tdName);
@@ -147,3 +149,20 @@ let productData = {
 }
 btn.addEventListener("click", btnAddproduct)
 getProducts()
+
+// function deleteProduct
+function deleteProduct(event) {
+    loadProducts()
+    let ifConfirm = window.confirm("Are you sur you want to delete?");
+    if (ifConfirm){
+        event.target.parentElement.parentElement.remove()
+    }
+    saveProducts();
+    questions.splice(index,1);
+
+}
+
+
+
+
+
