@@ -124,11 +124,6 @@ function getProducts() {
 //-----------------------Show Form to Add prodcut funtion-------------------
 function btnAddproduct() {
     show(dom_product_dialog);
-    
-    productName.value="";
-    cateGory.value="";
-    quanitys.value="";
-    unitPrice.value="";
 }
 
 let btn = document.querySelector("#add-product");
