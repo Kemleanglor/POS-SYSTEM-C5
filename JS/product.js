@@ -25,6 +25,10 @@ function cancel() {
 
 function addProduct() {
     hid(dom_product_dialog);
+    if (productName.value==="" || cateGory.value==="" || quanitys.value==="" || unitPrice.value===""){
+        alert("You need  to fill all input form")
+        return;
+    }
 
     let productId = productData.lastestId;
     if (productId === null || productData.products.length === 0) {
@@ -120,6 +124,11 @@ function getProducts() {
 //-----------------------Show Form to Add prodcut funtion-------------------
 function btnAddproduct() {
     show(dom_product_dialog);
+    
+    productName.value="";
+    cateGory.value="";
+    quanitys.value="";
+    unitPrice.value="";
 }
 
 let btn = document.querySelector("#add-product");
