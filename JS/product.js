@@ -25,7 +25,7 @@ function cancel() {
 
 function addProduct() {
     hid(dom_product_dialog);
-    if (productName.value==="" || cateGory.value==="" || quanitys.value==="" || unitPrice.value===""){
+    if (productName.value === "" || cateGory.value === "" || quanitys.value === "" || unitPrice.value === "") {
         alert("You need  to fill all input form")
         return;
     }
@@ -60,7 +60,7 @@ function addProduct() {
 function getProducts() {
     loadProducts()
 
-    if (localStorage.length===0){
+    if (localStorage.length === 0) {
         return;
     }
 
@@ -68,7 +68,7 @@ function getProducts() {
     tbody.remove();
 
     let newTbody = document.createElement("tbody");
-    for (let data of products){
+    for (let data of products) {
 
         let tRows = document.createElement("tr");
 
@@ -84,12 +84,14 @@ function getProducts() {
         let iconedit = document.createElement("i");
         let iconvisit = document.createElement("i");
         icondelete.classList.add("material-icons");
-        icondelete.textContent="delete";
-        icondelete.addEventListener("click",deleteProduct)
+        icondelete.textContent = "delete";
+        icondelete.addEventListener("click", deleteProduct)
 
         iconedit.classList.add("material-icons");
         iconedit.textContent = "edit";
-      
+        iconedit.addEventListener("click", editproduct)
+        addbrn.textContent = 'Add';
+
 
         iconvisit.classList.add("material-icons");
         iconvisit.textContent = "visibility";
@@ -98,14 +100,14 @@ function getProducts() {
         tdAction.appendChild(iconedit);
         tdAction.appendChild(iconvisit);
 
-        
+
 
         tdId.textContent = data.id;
         tdName.textContent = data.name;
         tdCategory.textContent = data.categroy;
         tdQuanity.textContent = data.quanity;
         tdUnitprice.textContent = data.price;
-        tdTotbalprice.textContent = parseInt(data.quanity)*parseInt(data.price);
+        tdTotbalprice.textContent = parseInt(data.quanity) * parseInt(data.price);
 
         tRows.appendChild(tdId);
         tRows.appendChild(tdName);
@@ -126,11 +128,11 @@ function getProducts() {
 //-----------------------Show Form to Add prodcut funtion-------------------
 function btnAddproduct() {
     show(dom_product_dialog);
-    productName.value="";
-    cateGory.value="";
-    quanitys.value="";
-    unitPrice.value="";
-    
+    productName.value = "";
+    cateGory.value = "";
+    quanitys.value = "";
+    unitPrice.value = "";
+
 }
 
 let btn = document.querySelector("#add-product");
@@ -141,6 +143,8 @@ let productName = document.querySelector("#name");
 let cateGory = document.querySelector("#category");
 let quanitys = document.querySelector("#quanity");
 let unitPrice = document.querySelector("#unit-price");
+let addbrn = document.querySelector('footer').lastElementChild;
+let header = document.querySelector("header")
 
 //---------------------Product Data -----------------------------
 let productData = {
@@ -154,15 +158,31 @@ getProducts()
 function deleteProduct(event) {
     loadProducts()
     let ifConfirm = window.confirm("Are you sur you want to delete?");
-    if (ifConfirm){
+    if (ifConfirm) {
         event.target.parentElement.parentElement.remove()
     }
     saveProducts();
-    questions.splice(index,1);
+    questions.splice(index, 1);
 
 }
 
 // edit-product
+function editproduct(event) {
+    show(dom_product_dialog);
+    addbrn.textContent = 'Update';
+    header.textContent = "Edit Product";
+    let row = event.target.parentElement.parentElement;
+    let index = Array.from(row.parentNode.children).indexOf(row);
+    let product = productData.products[index];
+    productName.value = product.name;
+    cateGory.value = product.catGgory;
+    quanitys.value = product.quanity;
+    unitPrice.value = product.price;
+    productData.editingIndex = index;
+
+
+}
+
 
 
 
