@@ -174,13 +174,15 @@ function editproduct(event) {
     let row = event.target.parentElement.parentElement;
     let index = Array.from(row.parentNode.children).indexOf(row);
     let product = productData.products[index];
-    productName.value = product.name;
-    cateGory.value = product.catGgory;
-    quanitys.value = product.quanity;
-    unitPrice.value = product.price;
-    productData.editingIndex = index;
-
-
+    productToEdit = event.target.parentElement.parentElement.dataset.index;
+    
+    // update the dialog with question informatin
+    let question = productData[productToEdit];
+    document.getElementById("Name").value = question.name;
+    document.getElementById("category").value = question.category;
+    document.getElementById("quantity").value = question.quantity;
+    document.getElementById("quantity").value = question.quantity;
+    document.getElementById("total").value=question.total;
 }
 
 
