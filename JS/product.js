@@ -152,13 +152,14 @@ getProducts()
 
 // function deleteProduct
 function deleteProduct(event) {
-    loadProducts()
+    event.preventDefault();
     let ifConfirm = window.confirm("Are you sur you want to delete?");
     if (ifConfirm){
-        event.target.parentElement.parentElement.remove()
+        event.target.parentElement.parentElement.remove();
     }
+    // loadProducts()
+    productData.products.splice(index,1);
     saveProducts();
-    questions.splice(index,1);
 
 }
 
