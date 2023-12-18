@@ -157,7 +157,7 @@ function deleteProduct(event) {
     if (ifConfirm){
         event.target.parentElement.parentElement.remove();
     }
-    // loadProducts()
+    loadProducts()
     productData.products.splice(index,1);
     saveProducts();
 
