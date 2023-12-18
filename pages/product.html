@@ -76,13 +76,25 @@
                 <div class="add-product">
                     <div class="add-item-icon">
                         <i class="fa fa-plus"></i>
-                        <button id="add-product">Add Product</button>
                     </div>
+                    <button id="add-product">Product</button>
+                </div>
+                <div class="show-all-categories">
+                    <label for="category-select">Filter by Caegory:</label>
+                    <select id="category-select">
+                        <option value="">--Please choose an option--</option>
+                        <option value="all">Show all</option>
+                        <option value="plan">Plan</option>
+                        <option value="flower">Flower</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Serch Product">
                 </div>
             </div>
             <div class="table-item">
                 <table>
-                    <thead> 
+                    <thead>
                         <tr>
                             <th>Product ID</th>
                             <th>Product Name</th>
@@ -94,10 +106,12 @@
                         </tr>
                     </thead>
                     <tbody>
+
                     </tbody>
                 </table>
 
             </div>
+
         </div>
     </main>
 </body>
