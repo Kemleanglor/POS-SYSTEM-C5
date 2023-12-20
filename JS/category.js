@@ -26,6 +26,7 @@ function saveCategory() {
         CategoryData.category = categoryStorage;
     }
   }
+// =================search ===========
 
 
 //========= Update the View======================
@@ -52,14 +53,14 @@ function renderCategory(){
         iconEdit.addEventListener("click",editCategory)
 
         let iconView = document.createElement("i");
-        iconView.classList.add("material-icons");
-        iconView.textContent="visibility";
+        // iconView.classList.add("material-icons");
+        // iconView.textContent="visibility";
 
         tdId.textContent=data.id;
         tdName.textContent=data.name;
         tdAction.appendChild(iconDelete);
         tdAction.appendChild(iconEdit);
-        tdAction.appendChild(iconView);
+        // tdAction.appendChild(iconView);
 
         tRows.appendChild(tdId)
         tRows.appendChild(tdName);
@@ -73,8 +74,8 @@ function renderCategory(){
     table.appendChild(newTbody);
 }
 
-
 //=======================Edit  and Remove Procduct==================
+
 function editCategory(event){
     let index = event.target.parentElement.parentElement.dataset.index;
     let categorys = CategoryData.category[index];
@@ -92,16 +93,13 @@ function editCategory(event){
 }
 
 function removeCategory(event){
-    let index = event.target.parentElement.parentElement.dataset.index;
 
+    let index = event.target.parentElement.parentElement.dataset.index;
     CategoryData.category.splice(index,1);
 
     saveCategory();
-
     renderCategory();
-
 }
-
 
 // ==================Buntton CanCel and Add Category to array==========
 
@@ -123,7 +121,7 @@ function OnAdd(){
     else  {
         categoryId = categoryId
     }
-    //---------------- update lastest ID to the product list----------
+    //=======================update lastest ID to the product list==================
     CategoryData.lastestId = categoryId;
     let categories={};
     categories.id=categoryId;
@@ -149,18 +147,18 @@ function OnAdd(){
     renderCategory()
 }
 
-
 function Addcategory(){
     show(dialog_catagory)
-}
+    document.getElementById("name").value = "";
+    document.getElementById("dct").value = "";
 
+}
+//================== main==================
 
 let dialog_catagory = document.getElementById("category-dialog");
-
 let btnAddcategory = document.getElementById("btn-add");
 btnAddcategory.addEventListener("click",Addcategory);
-let searchCategory = document.getElementById("search");
-
+let btnSearch = document.querySelector("#search");
 let table = document.querySelector("table")
 
 let editIndex=null;

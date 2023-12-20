@@ -247,7 +247,6 @@ h4 {
 
 nav i {
     font-size: larger;
-    /* color: rgb(255, 255, 255); */
     margin-left: 20px;
 }
 
@@ -258,7 +257,6 @@ main {
 
 main .aside-left {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     width: 230px;
@@ -284,9 +282,8 @@ main .aside-left .item:hover {
     background: red;
 }
 
-
-
 /*--------------------- Dialog ------------------------------------*/
+
 #category-dialog {
     position: fixed;
     height: 100vh;
@@ -360,14 +357,15 @@ main .aside-left .item:hover {
     color: black;
 }
 
-
-
 main .category {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 1170px;
     height: 100%;
+}
+#search{
+    color: black;
 }
 main .category .head-category{
     display: flex;
@@ -397,7 +395,6 @@ main .category .head-category input{
 }
 main .category .head-category input:hover{
     width: 400px;
-    /* text-align: center; */
 }
 
 
@@ -431,9 +428,7 @@ main .category .table-item table td{
     border-top: 2px solid white;
     border-bottom: 2px solid white;
 }
-/* main .aside-right .table-item table tr:nth-child(even){
-    background: rgb(195, 228, 240);
-} */
+
 main .category .table-item table tr:nth-child(even){
     background: rgb(217, 218, 214);
 }
@@ -448,8 +443,7 @@ main .category .table-item table tr td i:nth-child(2){
     
 }
 main .category .table-item table tr td i:nth-child(3){
-    color: rgb(7, 124, 7);
-    
+    color: rgb(7, 124, 7);   
 }
   
 
