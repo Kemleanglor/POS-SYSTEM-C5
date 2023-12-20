@@ -1,4 +1,11 @@
+
 //=================== ProdacutData and CategoryData ===============
+let productData = JSON.parse(localStorage.getItem("product"))
+
+for(let data of productData){
+    console.log(data.id)
+}
+
 function saveOrder() {
     localStorage.setItem("order", JSON.stringify(orderData.order))
     
