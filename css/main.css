@@ -91,7 +91,7 @@ main .aside-right .show-items .show-name {
     background: rgb(221, 221, 221);
     border-radius: 10px;
     /* border: 1px solid teal; */
-    
+
 }
 
 main .aside-right .show-items .show-name .box-name {
@@ -101,17 +101,20 @@ main .aside-right .show-items .show-name .box-name {
     width: 120px;
     height: 35px;
     margin-top: -10px;
-    background:rgba(102, 11, 11, 0.884);
+    background: rgba(102, 11, 11, 0.884);
     /* border-radius: 5px; */
 }
 
 
 main .aside-right .show-items .show-name .box-name p {
     color: rgb(255, 255, 255);
-    font-weight:bold;
+    font-weight: bold;
 }
 
-main .aside-right .show-items .show-name .box-number {
+main .aside-right .show-items .show-name .instock,
+.category,
+.soldout,
+.income {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,7 +122,10 @@ main .aside-right .show-items .show-name .box-number {
     height: 90px;
 }
 
-main .aside-right .show-items .show-name .box-number p {
+main .aside-right .show-items .show-name .instock p,
+.category p,
+.soldout p,
+.income p {
     color: rgb(0, 0, 0);
     font-size: 50px;
     font-weight: bold;
@@ -142,13 +148,15 @@ main .aside-right .table-item table {
     width: 100%;
     margin-top: 20px;
 }
-main .aside-right .table-item table th{
+
+main .aside-right .table-item table th {
     padding: 15px;
     background: teal;
     color: white;
     border: 2px solid white;
 }
-main .aside-right .table-item table td{
+
+main .aside-right .table-item table td {
     text-align: center;
     padding: 15px;
     color: black;
@@ -156,11 +164,12 @@ main .aside-right .table-item table td{
     border-top: 2px solid white;
     border-bottom: 2px solid white;
 }
-/* main .aside-right .table-item table tr:nth-child(even){
-    background: rgb(195, 228, 240);
-} */
-main .aside-right .table-item table tr:nth-child(even){
+
+
+main .aside-right .table-item table tr:nth-child(even) {
     background: rgb(217, 218, 214);
 }
 
-  
+main .aside-right .table-item table td i{
+    color: rgb(0, 226, 49);
+}
