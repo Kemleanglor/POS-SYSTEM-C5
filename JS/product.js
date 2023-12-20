@@ -187,7 +187,7 @@ for (let remove of removeBtn) {
     //   localStorage.setItem("product", JSON.stringify(allProduct));
     //   location.reload();
     // });
-}
+} 
 dailogBtn.addEventListener("click", () => {
     show(addBtn);
     hide(editBtn);
