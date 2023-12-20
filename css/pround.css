@@ -28,12 +28,10 @@ nav i {
     margin-left: 20px;
 }
 
-
 /* Container */
 main {
     display: flex;
 }
-
 
 /* Menu */
 main .aside-left {
@@ -54,7 +52,6 @@ main .aside-left .item {
     height: 40px;
     margin-top: 30px;
     gap: 25px;
-
 }
 
 main .aside-left .item i {
@@ -64,7 +61,10 @@ main .aside-left .item i {
 main .aside-left .item:hover {
     background: red;
 }
+
+/*--------------------- Dialog ------------------------------------*/
 #product-dialog {
+    display: none;
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -99,9 +99,11 @@ main .aside-left .item:hover {
 .dialog section {
     padding: 1rem;
 }
-.dialog section .input-item{
+
+.dialog section .input-item {
     display: flex;
     margin-top: 20px;
+
 }
 
 .dialog .input-item label {
@@ -110,6 +112,22 @@ main .aside-left .item:hover {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     width: 80px;
+
+}
+
+.dialog section .input-item #category-select {
+    width: 96%;
+    height: 50px;
+    margin-left: 20px;
+    color: black;
+}
+
+option {
+    color: black;
+}
+
+.dialog section .input-item #category {
+    color: black;
 }
 
 .dialog section .input-item input {
@@ -119,6 +137,9 @@ main .aside-left .item:hover {
     color: black;
     padding: 15px;
     margin-left: 20px;
+    /* font-size: 1.1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem; */
 }
 
 .dialog footer {
@@ -127,7 +148,8 @@ main .aside-left .item:hover {
     justify-content: flex-end;
     margin: 0;
 }
-.dialog footer button{
+
+.dialog footer button {
     background: rgb(39, 148, 236);
     padding: 10px;
     width: 80px;
@@ -136,13 +158,19 @@ main .aside-left .item:hover {
     border: none;
     color: black;
 }
+
+.dialog footer button:hover {
+    cursor: pointer;
+}
+
+/*--------------------- Display items on table --------------------*/
 main .aside-right {
+    width: 1170px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1170px;
-    
-
+    /* justify-content: center; */
+    /* background: grey; */
 }
 
 main .aside-right .show-items {
@@ -163,6 +191,7 @@ main .aside-right .show-items .add-product {
 }
 
 main .aside-right .show-items .add-product .add-item-icon {
+    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,25 +203,44 @@ main .aside-right .show-items .add-product .add-item-icon {
 main .aside-right .show-items .add-product .add-item-icon i {
     color: black;
 }
-main .aside-right .show-items .add-product button{
-    background:none;
+
+main .aside-right .show-items .add-product button {
+    background: none;
     width: 70px;
     height: 30px;
     border: none;
     font-weight: bold;
 }
-main .aside-right .show-items .add-product button:hover{
+
+main .aside-right .show-items .add-product button:hover {
     cursor: pointer;
 }
+
+main .aside-right .show-items .show-all-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main .aside-right .show-items .search-box input {
+    height: 39px;
+    width: 450px;
+    color: black;
+    font-size: 16px;
+    border-radius: 13px;
+}
+
+
 main .aside-right .table-item {
     width: 77%;
     height: 100%;
     margin-top: 50px;
 }
 
-main .aside-right .table-item h1 {
+/* main .aside-right .table-item h1 {
     color: black;
-}
+  } */
 
 main .aside-right .table-item table {
     font-family: arial, sans-serif;
@@ -200,13 +248,15 @@ main .aside-right .table-item table {
     width: 100%;
     margin-top: 20px;
 }
-main .aside-right .table-item table th{
+
+main .aside-right .table-item table th {
     padding: 15px;
     background: teal;
     color: white;
     border: 2px solid white;
 }
-main .aside-right .table-item table td{
+
+main .aside-right .table-item table td {
     text-align: center;
     padding: 15px;
     color: black;
@@ -215,22 +265,107 @@ main .aside-right .table-item table td{
     border-bottom: 2px solid white;
 }
 
-main .aside-right .table-item table tr:nth-child(even){
+/* main .aside-right .table-item table tr:nth-child(even){
+      background: rgb(195, 228, 240);
+  } */
+main .aside-right .table-item table tr:nth-child(even) {
     background: rgb(217, 218, 214);
 }
-tr td .material-icons{
+
+main .aside-right .table-item table tr td i:nth-child(1) {
     color: red;
-   
 }
-tr td .material-icons:nth-child(2){
-    margin-right: 10px;
-    margin-left: 10px;
+
+main .aside-right .table-item table tr td i:hover {
+    cursor: pointer;
+    background-color: cornflowerblue;
+}
+
+main .aside-right .table-item table tr td i:nth-child(2) {
     color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-tr td .material-icons:nth-child(3){
+
+main .aside-right .table-item table tr td i:nth-child(3) {
+    color: rgb(7, 124, 7);
+}
+
+#view-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.533);
+    z-index: 10;
+}
+
+.dialogs {
+    position: fixed;
+    top: 15vh;
+    left: 35%;
+    width: 40%;
+    z-index: 100;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border: 5px solid teal;
+    background-color: white;
+}
+
+.dialogs h1 {
     color: black;
+    background-color: teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
 }
 
+.dialogs section div {
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 3px;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.dialogs section div p {
+    color: black;
+    font-size: 23px;
+    font-weight: bold;
+}
 
-  
+.dialogs section div span {
+    color: teal;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 150px;
+}
+
+.dialogs section {
+    padding: 1.5rem;
+}
+
+.a {
+    width: 95%;
+}
+
+.back {
+    display: flex;
+    border-radius: 5px;
+    width: 100px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border: 1px solid red;
+    color: white;
+    background: #db1b1b;
+    cursor: pointer;
+    float: right;
+}

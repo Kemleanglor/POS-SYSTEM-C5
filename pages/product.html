@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product</title>
     <link rel="stylesheet" href="../css/pround.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="../JS/product.js" defer></script>
+    <script src="../js/product.js" defer></script>
 </head>
 
 <body>
@@ -44,7 +44,8 @@
                 </a>
             </div>
         </div>
-        <div id="product-dialog" style="display:none">
+
+        <div id="product-dialog">
             <div class="dialog">
                 <header>Add new Product</header>
                 <section>
@@ -54,11 +55,17 @@
                     </div>
                     <div class="input-item">
                         <label for="Category">Category: </label>
-                        <input id="category" type="text" placeholder="Name Category">
+                        <select id="category-select">
+                            <option value="">--Please choose an option--</option>
+                            <option value="all">Cake</option>
+                            <option value="plan">Plan</option>
+                            <option value="flower">Flower</option>
+
+                        </select>
                     </div>
                     <div class="input-item">
                         <label for="">Quanity: </label>
-                        <input id="quanity" type="number" placeholder="Quanity Product">
+                        <input id="quantity" type="number" placeholder="Quanity Product">
                     </div>
                     <div class="input-item">
                         <label for="">Price: </label>
@@ -66,23 +73,37 @@
                     </div>
                 </section>
                 <footer>
+<<<<<<< HEAD
                     <button onclick="cancel()">Cancel</button>
                     <button onclick="addProduct()">Add</button>
                 </footer>
             </div>
         </div>
+=======
+                    <!-- chaged Id -->
+                    <button id="cancel">Cancel</button>
+                    <button id="edit-product">Edit</button>
+                    <button id="add-product">Add</button>
+                </footer>
+            </div>
+        </div>
+
+>>>>>>> e8c83acb1f8aad70cf3f50a27ced962ba40db6cd
         <div class="aside-right">
             <div class="show-items">
                 <div class="add-product">
                     <div class="add-item-icon">
                         <i class="fa fa-plus"></i>
-                        <button id="add-product">Add Product</button>
                     </div>
+                    <button id="add-products">Product</button>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="serch-product" id="searchProduct">
                 </div>
             </div>
             <div class="table-item">
                 <table>
-                    <thead> 
+                    <thead>
                         <tr>
                             <th>Product ID</th>
                             <th>Product Name</th>
@@ -94,13 +115,44 @@
                         </tr>
                     </thead>
                     <tbody>
-                       
+
                     </tbody>
                 </table>
-
             </div>
         </div>
     </main>
-</body>
+    <div id="view-dialog"style="display:none">
+        <div class="dialogs">
+            <h1>View Product</h1>
+            <section>
+                <div class="name">
+                    <p>Name:</p>
+                    <span></span>
+                </div>
+                <div class="category">
+                    <p>Category: </p>
+                    <span></span>
+                </div>
+                <div class="quantity">
+                    <p>quantity</p>
+                    <span></span>
+                </div>
+                <div class="view-price">
+                    <p>Net price:</p>
+                    <span></span>
+                </div>
+                <div class="view-sold">
+                    <p>Sold out :</p>
+                    <span></span>
+                </div>
 
-</html>
+            </section>
+            <div class="a">
+                <button class="back" onclick="cancel">Back</button>
+                
+            </div>
+        </div>
+    </div>
+
+
+</body>
