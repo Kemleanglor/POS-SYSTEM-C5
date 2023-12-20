@@ -28,10 +28,12 @@ nav i {
     margin-left: 20px;
 }
 
+
 /* Container */
 main {
     display: flex;
 }
+
 
 /* Menu */
 main .aside-left {
@@ -52,6 +54,7 @@ main .aside-left .item {
     height: 40px;
     margin-top: 30px;
     gap: 25px;
+
 }
 
 main .aside-left .item i {
@@ -64,7 +67,6 @@ main .aside-left .item:hover {
 
 /*--------------------- Dialog ------------------------------------*/
 #product-dialog {
-    display: none;
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -99,11 +101,9 @@ main .aside-left .item:hover {
 .dialog section {
     padding: 1rem;
 }
-
-.dialog section .input-item {
+.dialog section .input-item{
     display: flex;
     margin-top: 20px;
-
 }
 
 .dialog .input-item label {
@@ -111,23 +111,18 @@ main .aside-left .item:hover {
     display: block;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
-    width: 80px;
-
+    width: 150px;
 }
-
-.dialog section .input-item #category-select {
+/* .dialog section .input-item {
+    background: yellow;
+} */
+.dialog section .input-item #category{
     width: 96%;
     height: 50px;
     margin-left: 20px;
-    color: black;
 }
-
-option {
-    color: black;
-}
-
 .dialog section .input-item #category {
-    color: black;
+    color:black;
 }
 
 .dialog section .input-item input {
@@ -138,8 +133,8 @@ option {
     padding: 15px;
     margin-left: 20px;
     /* font-size: 1.1rem;
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem; */
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; */
 }
 
 .dialog footer {
@@ -148,8 +143,7 @@ option {
     justify-content: flex-end;
     margin: 0;
 }
-
-.dialog footer button {
+.dialog footer button{
     background: rgb(39, 148, 236);
     padding: 10px;
     width: 80px;
@@ -159,18 +153,12 @@ option {
     color: black;
 }
 
-.dialog footer button:hover {
-    cursor: pointer;
-}
-
 /*--------------------- Display items on table --------------------*/
 main .aside-right {
     width: 1170px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-    /* background: grey; */
 }
 
 main .aside-right .show-items {
@@ -203,16 +191,14 @@ main .aside-right .show-items .add-product .add-item-icon {
 main .aside-right .show-items .add-product .add-item-icon i {
     color: black;
 }
-
-main .aside-right .show-items .add-product button {
-    background: none;
+main .aside-right .show-items .add-product button{
+    background:none;
     width: 70px;
     height: 30px;
     border: none;
     font-weight: bold;
 }
-
-main .aside-right .show-items .add-product button:hover {
+main .aside-right .show-items .add-product button:hover{
     cursor: pointer;
 }
 
@@ -222,15 +208,26 @@ main .aside-right .show-items .show-all-categories {
     align-items: center;
 }
 
+main .aside-right .show-items .show-all-categories label {
+    font-weight: bold;
+    color: black;
+    margin-right: 15px;
+}
+
+main .aside-right .show-items .show-all-categories #category-select {
+    height: 30px;
+}
+
+main .aside-right .show-items .show-all-categories #category-select,
+option {
+    color: black;
+}
 
 main .aside-right .show-items .search-box input {
     height: 39px;
-    width: 450px;
+    width: 230px;
     color: black;
-    font-size: 16px;
-    border-radius: 13px;
 }
-
 
 main .aside-right .table-item {
     width: 77%;
@@ -238,9 +235,9 @@ main .aside-right .table-item {
     margin-top: 50px;
 }
 
-/* main .aside-right .table-item h1 {
+main .aside-right .table-item h1 {
     color: black;
-  } */
+}
 
 main .aside-right .table-item table {
     font-family: arial, sans-serif;
@@ -248,15 +245,13 @@ main .aside-right .table-item table {
     width: 100%;
     margin-top: 20px;
 }
-
-main .aside-right .table-item table th {
+main .aside-right .table-item table th{
     padding: 15px;
     background: teal;
     color: white;
     border: 2px solid white;
 }
-
-main .aside-right .table-item table td {
+main .aside-right .table-item table td{
     text-align: center;
     padding: 15px;
     color: black;
@@ -264,31 +259,32 @@ main .aside-right .table-item table td {
     border-top: 2px solid white;
     border-bottom: 2px solid white;
 }
-
 /* main .aside-right .table-item table tr:nth-child(even){
-      background: rgb(195, 228, 240);
-  } */
-main .aside-right .table-item table tr:nth-child(even) {
+    background: rgb(195, 228, 240);
+} */
+main .aside-right .table-item table tr:nth-child(even){
     background: rgb(217, 218, 214);
 }
-
-main .aside-right .table-item table tr td i:nth-child(1) {
-    color: red;
-}
-
-main .aside-right .table-item table tr td i:hover {
+main .aside-right  .table-item table tr td i:hover{
     cursor: pointer;
-    background-color: cornflowerblue;
+    background: yellowgreen;
+    width: 30px;
+    height: 30px;
+    
 }
-
-main .aside-right .table-item table tr td i:nth-child(2) {
+main .aside-right .table-item table tr td i:nth-child(1){
+    color: red;
+    
+}
+main .aside-right .table-item table tr td i:nth-child(2){
     color: blue;
     margin-left: 10px;
     margin-right: 10px;
+    
 }
-
-main .aside-right .table-item table tr td i:nth-child(3) {
+main .aside-right .table-item table tr td i:nth-child(3){
     color: rgb(7, 124, 7);
+    
 }
 
 #view-dialog {
@@ -334,12 +330,14 @@ main .aside-right .table-item table tr td i:nth-child(3) {
     margin-bottom: 3px;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .dialogs section div p {
     color: black;
     font-size: 23px;
     font-weight: bold;
+
 }
 
 .dialogs section div span {
@@ -347,16 +345,15 @@ main .aside-right .table-item table tr td i:nth-child(3) {
     font-weight: bold;
     font-size: 20px;
     margin-right: 150px;
+
 }
 
 .dialogs section {
     padding: 1.5rem;
 }
-
 .a {
     width: 95%;
 }
-
 .back {
     display: flex;
     border-radius: 5px;
