@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <script src="../js/order.js" defer></script>
+    <link rel="stylesheet" href="../css/order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <nav>
+        <i class="fa fa-cart-plus fa-lg"></i>
+        <h4>POS SYSTEM</h4>
+    </nav>
+    <main>
+        <div class="aside-left">
+            <div class="item">
+                <i class="	fa fa-align-justify fa-lg"></i>
+                <a href="../index.html">
+                    <p>Dashboard</p>
+                </a>
+                
+            </div>
+            <div class="item">
+                <i class="fa fa-cart-plus fa-lg"></i>
+                <a href="product.html">
+                    <p>Product</p>
+                </a>
+            </div>
+            <div class="item">
+                <i class="fa fa-th fa-lg"></i>
+                <a href="category.html">
+                    <p>Cartegories</p>
+                </a>
+            </div>
+            <div class="item">
+                <i class="	fa fa-cart-arrow-down fa-lg"></i>
+                <a href="#">
+                    <p>Order</p>
+                </a>
+            </div>
+        </div>
+        <div class="aside-right">
+            <div class="aside-right-header">
+                <div class="add-card">
+                    <div class="search">
+                        <input type="text" placeholder="Search ID" id="input-id">
+                        <button id="search-id">Search</button>
+                    </div>
+                    <div class="box-add-card">
+                        <div class="header-box">
+                            
+                        </div>
+                        <div class="body-box">
+                            
+                        </div>
+                        <button id="add-to-card">ADD TO CARD</button>
+                    </div>
+                </div>
+                <div class="table-item">
+                    <h1>LIST CARD</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product ID</th>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                                <!-- <th>Total Price</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="aside-right-footer">
+                <h4>TOTAL PRICE: <span></span></h4>
+                <button id="check-out"><a href="done.html">CHECK OUT</a></button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

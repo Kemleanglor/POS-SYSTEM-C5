@@ -64,6 +64,11 @@ main .aside-left .item i {
 main .aside-left .item:hover {
     background: red;
 }
+<<<<<<< HEAD
+
+/*--------------------- Dialog ------------------------------------*/
+=======
+>>>>>>> fe31b647f168743d7dfa4b94eba53aeebdfef76b
 #product-dialog {
     position: fixed;
     height: 100vh;
@@ -119,7 +124,13 @@ main .aside-left .item:hover {
     color: black;
     padding: 15px;
     margin-left: 20px;
+<<<<<<< HEAD
+    /* font-size: 1.1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; */
+=======
 
+>>>>>>> fe31b647f168743d7dfa4b94eba53aeebdfef76b
 }
 
 .dialog footer {
@@ -137,6 +148,17 @@ main .aside-left .item:hover {
     border: none;
     color: black;
 }
+<<<<<<< HEAD
+
+/*--------------------- Display items on table --------------------*/
+main .aside-right {
+    width: 1170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* background: grey; */
+=======
 main .aside-right {
     display: flex;
     flex-direction: column;
@@ -144,6 +166,7 @@ main .aside-right {
     width: 1170px;
     
 
+>>>>>>> fe31b647f168743d7dfa4b94eba53aeebdfef76b
 }
 
 main .aside-right .show-items {
@@ -164,7 +187,11 @@ main .aside-right .show-items .add-product {
 }
 
 main .aside-right .show-items .add-product .add-item-icon {
+<<<<<<< HEAD
+    background: white;
+=======
 
+>>>>>>> fe31b647f168743d7dfa4b94eba53aeebdfef76b
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,6 +213,37 @@ main .aside-right .show-items .add-product button{
 main .aside-right .show-items .add-product button:hover{
     cursor: pointer;
 }
+<<<<<<< HEAD
+
+main .aside-right .show-items .show-all-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .aside-right .show-items .show-all-categories label {
+    font-weight: bold;
+    color: black;
+    margin-right: 15px;
+}
+
+main .aside-right .show-items .show-all-categories #category-select {
+    height: 30px;
+}
+
+main .aside-right .show-items .show-all-categories #category-select,
+option {
+    color: black;
+}
+
+main .aside-right .show-items .search-box input {
+    height: 39px;
+    width: 230px;
+    color: black;
+}
+
+=======
+>>>>>>> fe31b647f168743d7dfa4b94eba53aeebdfef76b
 main .aside-right .table-item {
     width: 77%;
     height: 100%;
@@ -216,6 +274,28 @@ main .aside-right .table-item table td{
     border-top: 2px solid white;
     border-bottom: 2px solid white;
 }
+<<<<<<< HEAD
+/* main .aside-right .table-item table tr:nth-child(even){
+    background: rgb(195, 228, 240);
+} */
+main .aside-right .table-item table tr:nth-child(even){
+    background: rgb(217, 218, 214);
+}
+main .aside-right .table-item table tr td i:nth-child(1){
+    color: red;
+    
+}
+main .aside-right .table-item table tr td i:nth-child(2){
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+main .aside-right .table-item table tr td i:nth-child(3){
+    color: rgb(7, 124, 7);
+    
+}
+=======
 
 main .aside-right .table-item table tr:nth-child(even){
     background: rgb(217, 218, 214);
@@ -236,3 +316,4 @@ tr td .material-icons:nth-child(3){
 
 
   
+>>>>>>> fe31b647f168743d7dfa4b94eba53aeebdfef76b
