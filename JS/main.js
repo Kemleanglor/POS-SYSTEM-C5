@@ -1,5 +1,6 @@
 let productData = JSON.parse(localStorage.getItem("product"))
 let categoryData = JSON.parse(localStorage.getItem("category"))
+console.log(categoryData)
 let orderData =JSON.parse(localStorage.getItem("order"));
 
 //====================== Count Category ==================

@@ -3,6 +3,9 @@
     margin: 0;
     color: white;
 }
+body{
+    height: 100vh;
+}
 a{
     text-decoration: none;
     font-weight: bold;
@@ -11,7 +14,7 @@ a{
 
 nav {
     background: teal;
-    height: 50px;
+    height: 8%;
     display: flex;
     align-items: center;
     gap: 25px;
@@ -35,7 +38,7 @@ main .aside-left {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 230px;
+    width: 17%;
     height: 100vh;
     background: rgb(0, 0, 0);
 }

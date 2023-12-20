@@ -1,0 +1,54 @@
+body{
+    background: rgb(5, 84, 175);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.done{
+    background: white;
+    width: 35%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-radius: 10px;
+}
+.done .done-header{
+    background: rgb(194, 216, 194);
+    width:16% ;
+    height: 30%;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -80px;
+    
+}
+.done .done-header img{
+    width: 60px;
+}
+.done .done-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-top: -25px;
+
+}
+.done .done-footer p{
+    margin-top: -10px;
+}
+.done .done-footer button{
+    background: rgb(65, 232, 65);
+    width: 100px;
+    height: 40px;
+    border: none;
+    
+}
+.done .done-footer button a{
+    text-decoration: none;
+    font-weight: bold;
+}
