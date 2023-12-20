@@ -118,7 +118,7 @@ function getProducts() {
 
 
 
-<<<<<<< HEAD
+
 let dialog_products = document.getElementById("product-dialog");
 
 let btnAddProduct = document.getElementById("add-product");
@@ -141,7 +141,6 @@ renderProduct()
 
 
 
-=======
 //-----------------------Show Form to Add prodcut funtion-------------------
 function btnAddproduct() {
     show(dom_product_dialog);
@@ -168,7 +167,6 @@ let productData = {
 }
 btn.addEventListener("click", btnAddproduct)
 getProducts()
-<<<<<<< HEAD
 
 // function deleteProduct
 function deleteProduct(event) {
@@ -186,6 +184,3 @@ function deleteProduct(event) {
 
 
 
-=======
->>>>>>> fe31b647f168743d7dfa4b94eba53aeebdfef76b
->>>>>>> 4fbba9a794ceb6a349e97d23d85ac742b0dc572f
