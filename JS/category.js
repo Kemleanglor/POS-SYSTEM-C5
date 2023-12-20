@@ -1,125 +1,191 @@
+//========================= Get Product Data ================
+let productData = JSON.parse(localStorage.getItem("product"));
+console.log(productData)
 
-let dialog_category = document.getElementById("category-dialog");
-let searchCategory = document.getElementById("search");
-
-let nameCategory = document.querySelector("#idcategory")
-let namegategory = document.querySelector("#CategoryName");
-
-
-// -----------Buthon that we use-------------
-let btnAddCategory = document.getElementById("btn-add");
-btnAddCategory.addEventListener("click", addCategory);
-
-
-// ------------------------Show and hid daialong ------------------------
-function showCategory(element) {
-    element.style.display = "block";
+// ======================= HIDE / SHOW ====================
+function hid(element){
+    element.style.display ="none";
+    
 }
-function hideCategory(element) {
-    element.style.display = "none";
+function show(element){
+    element.style.display ="block";
+    
 }
 
-// -----------------save and store category reload in localstorage ---------------
+//===========================LOCAL STORAGE ==================
 
 function saveCategory() {
-    localStorage.setItem("categoryData",JSON.stringify(categoryData));
-
-}
-
-function reloadCategory() {
-    let reload =JSON.parse(localStorage.getItem("category"));
-    if (reload !== null){
-        categoryData.category = reload;
+    localStorage.setItem("category", JSON.stringify(CategoryData.category));
+    
+  }
+  
+  function loadCategory() {
+    let categoryStorage = JSON.parse(localStorage.getItem("category"));
+    if (categoryStorage !== null) {
+        CategoryData.category = categoryStorage;
     }
-}
+  }
 
-function storeCategory() {
-    let listCategory = {};
-}
+//========= Update the View======================
 
-// ------------------create and cancell when create element--------
-function onCancel() {
-    hideCategory(dialog_category);
-}
-
-function addCategory() {
-    showCategory(dialog_category);
-
-}
-
-// -----------------Remove and edite category-----------
-
-function removeCategory() {
-
-}
-
-function editCategory() {
-
-}
-//  -----------------create category-----------------
-
-function onCreate() {
-    let categoryID = categoryData.latestId;
-    if (categoryID === null) {
-        categoryID = 1;
-    } else {
-        categoryID += 1
-    }
-    categoryData.latestId = categoryID;
-    let storeObject = {
-        id:categoryID ,
-        name:CategoryName.value,
-    };
-    categoryData.category.push(storeObject);
-
-    saveCategory()
-
-    getCategory()
-}
-
-function getCategory(){
-
+function renderCategory(){
+    let tbody = document.querySelector("tbody");
     tbody.remove();
     let newTbody = document.createElement("tbody");
-    for (let data of categoryData.category){
-        // console.log(data)
-        let trow = document.createElement("tr");
+    let datas =0;
+    for (let data of CategoryData.category){
+        let tRows= document.createElement("tr");
+        tRows.dataset.index=datas
         let tdId = document.createElement("td");
-        let tdName = document.createElement("td");
-        let tdAction = document.createElement("td");
-// -----------icon delete---------------
-        let icondelete = document.createElement("i");
-        icondelete.classList.add("material-icons");
-        icondelete.textContent="delete";
-// ------------icon edit --------------------
-        let iconedite = document.createElement("i");
-        iconedite.classList.add("material-icons");
-        iconedite.textContent="edit";
-        tdId.textContent = data.id;
-        tdName.textContent = data.name;
+        let tdName=document.createElement("td");
+        let tdAction=document.createElement("td");
+        let iconDelete = document.createElement("i");
+        iconDelete.classList.add("material-icons");
+        iconDelete.textContent="delete";
+        iconDelete.addEventListener("click",removeCategory)
 
-        tdAction.appendChild(iconedite);
-        tdAction.appendChild(icondelete);
-        trow.appendChild(tdId)
-        trow.appendChild(tdName)
-        trow.appendChild(tdAction)
-        newTbody.appendChild(trow)
-        console.log(tbody)
-        // table.appendChild(tbody)
-        categoryData.category.push(newTbody)
+        let iconEdit = document.createElement("i");
+        iconEdit.classList.add("material-icons");
+        iconEdit.textContent="edit";
+        iconEdit.addEventListener("click",editCategory)
+
+        tdId.textContent=data.id;
+        tdName.textContent=data.name;
+        tdAction.appendChild(iconDelete);
+        tdAction.appendChild(iconEdit);
+
+        tRows.appendChild(tdId)
+        tRows.appendChild(tdName);
+        tRows.appendChild(tdAction);
+
+        newTbody.appendChild(tRows);
+
+        datas+=1
+    }
+
+    table.appendChild(newTbody);
+}
+
+//=======================Edit  and Remove Procduct==================
+
+function editCategory(event){
+    let index = event.target.parentElement.parentElement.dataset.index;
+    let categorys = CategoryData.category[index];
+    document.getElementById("name").value=categorys.name;
+    document.getElementById("dct").value=categorys.discription;
+
+    show(dialog_catagory);
+    let editHeader = document.querySelector("header");
+    editHeader.textContent="Edit Category";
+    let btnEdit = document.querySelector("footer").lastElementChild;
+    btnEdit.textContent="Edit";
+    
+    editIndex=index
+
+}
+
+function removeCategory(event){
+    let index = event.target.parentElement.parentElement.dataset.index;
+
+    CategoryData.category.splice(index,1);
+
+    saveCategory();
+
+    renderCategory();
+
+}
+// ==================search============
+
+function searchCategory(){
+    let trs = document.querySelectorAll("tbody tr");
+
+    for(let tr of trs){
+        let title=tr.firstElementChild.nextElementSibling.textContent;
+        if(title.toLowerCase().includes(btnSearch.value.toLowerCase())){
+            tr.style.display="";
+        }else{
+            tr.style.display="none";
+        }
+    }
+
+}
+searchCategory()
+
+
+// ==================Buntton CanCel and Add Category to array==========
+
+function OnCancel(){
+    hid(dialog_catagory)
+}
+
+function OnAdd(){
+    hid(dialog_catagory)
+
+    let categoryId = CategoryData.lastestId;
+    if (categoryId === null || CategoryData.category.length === 0) {
+        categoryId = 1;
 
     }
-    hideCategory(dialog_category);
-}
-// main
-let idcategory = document.getElementById("idcategory");
-let categoryName = document.getElementById("categoryName");
-let action = document.getElementById("action");
-let tbody = document.querySelector("tbody");
+    else if (editIndex === null) {
+        categoryId= categoryId + 1
+    }
+    else  {
+        categoryId = categoryId
+    }
+    //---------------- update lastest ID to the product list----------
+    CategoryData.lastestId = categoryId;
+    let categories={};
+    categories.id=categoryId;
+    categories.name=document.getElementById("name").value;
+    categories.discription=document.getElementById("dct").value;
+    if (editIndex===null){
+        CategoryData.category.push(categories);
+    }
+    else{
+        CategoryData.category[editIndex]=categories;
+    }
+    editIndex=null;
 
-let categoryData = {
-    category: [],
-    latestId: null
+    let addHeader = document.querySelector("header");
+    addHeader.textContent="Create Category";
+    let btnAdd = document.querySelector("footer").lastElementChild;
+    btnAdd.textContent="Add";
+
+    //========= save category===========
+    saveCategory()
+
+    //========== Update the view=========
+    renderCategory()
 }
 
-getCategory()
+
+function Addcategory(){
+    show(dialog_catagory)
+    document.getElementById("name").value ="";
+    document.getElementById("dct").value ="";
+
+}
+
+
+let dialog_catagory = document.getElementById("category-dialog");
+
+let btnAddcategory = document.getElementById("btn-add");
+btnAddcategory.addEventListener("click",Addcategory);
+let btnSearch = document.querySelector("#search");
+btnSearch.addEventListener('keyup',searchCategory)
+
+let table = document.querySelector("table")
+
+let editIndex=null;
+
+let CategoryData={
+    category:[],
+    lastestId:null,
+}
+
+loadCategory()
+
+renderCategory()
+
+
+
