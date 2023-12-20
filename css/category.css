@@ -2,12 +2,14 @@
     padding: 0;
     margin: 0;
     color: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-a{
+a {
     text-decoration: none;
     font-weight: bold;
 }
 
+/* ----------nav--------- */
 
 nav {
     background: teal;
@@ -23,25 +25,23 @@ h4 {
 
 nav i {
     font-size: larger;
-    /* color: rgb(255, 255, 255); */
     margin-left: 20px;
 }
+
+/* -------------main------------- */
 
 main {
     display: flex;
     background: rgb(255, 255, 255);
 }
-
 main .aside-left {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     width: 230px;
     height: 100vh;
     background: rgb(0, 0, 0);
 }
-
 main .aside-left .item {
     display: flex;
     align-items: center;
@@ -49,16 +49,14 @@ main .aside-left .item {
     height: 40px;
     margin-top: 30px;
     gap: 25px;
-
 }
-
 main .aside-left .item i {
     margin-left: 20px;
 }
-
 main .aside-left .item:hover {
     background: red;
 }
+/* ----------category----- */
 
 
 
@@ -145,13 +143,15 @@ main .category {
     width: 1170px;
     height: 100%;
 }
-main .category .head-category{
+
+main .category .head-category {
     display: flex;
     justify-content: space-between;
     width: 77%;
-    margin-top: 30px;
+    margin-top: 40px;
 }
-main .category .head-category #btn-add{
+
+main .category .head-category #btn-add {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,45 +161,39 @@ main .category .head-category #btn-add{
     border-radius: 10px;
     border: none;
     font-weight: bold;
-    gap: 10px;
+    /* gap: 10px; */
 
 }
 
-main .category .head-category input{
+main .category .head-category input {
     width: 250px;
     border: 2px solid black;
     border-radius: 5px;
     text-align: center;
 }
-main .category .head-category input:hover{
-    width: 400px;
-    /* text-align: center; */
-}
 
+main .category .head-category input:hover {
+    width: 400px;
+}
 
 main .category .table-item {
     width: 77%;
     height: 100%;
     margin-top: 50px;
 }
-
-main .category .table-item h1 {
-    color: black;
-}
-
 main .category .table-item table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
 }
-main .category .table-item table th{
+main .category .table-item table th {
     padding: 15px;
     background: teal;
     color: white;
     border: 2px solid white;
 }
-main .category .table-item table td{
+main .category .table-item table td {
     text-align: center;
     padding: 15px;
     color: black;
@@ -207,12 +201,11 @@ main .category .table-item table td{
     border-top: 2px solid white;
     border-bottom: 2px solid white;
 }
-/* main .aside-right .table-item table tr:nth-child(even){
-    background: rgb(195, 228, 240);
-} */
-main .category .table-item table tr:nth-child(even){
+
+main .category .table-item table tr:nth-child(even) {
     background: rgb(217, 218, 214);
 }
+<<<<<<< HEAD
 main .category .table-item table tr td i:nth-child(1){
     color: red;
     
@@ -228,7 +221,74 @@ main .category .table-item table tr td i:nth-child(3){
     
 }
   
+=======
+>>>>>>> fe31b647f168743d7dfa4b94eba53aeebdfef76b
 
+/* ---------daiolog------- */
+#category-dialog {
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
 
+.dialog-add {
+    position: fixed;
+    top: 10vh;
+    left: 40%;
+    width: 40%;
+    height: 50vh;
+    z-index: 100;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    margin-top: 90px;
+    overflow: hidden;
+    background:wheat;
+}
 
+.dialog-add header {
+    width: 100%;
+    color: white;
+    border-radius: 5px 0 5px 0;
+    font-size: 1.25rem;
+    padding: 1rem;
+    background: #000;
+}
 
+.dialog-add section {
+    padding: 20px;
+    margin-left: 25px;
+}
+section .itemCreate{
+    padding:10px;
+}
+
+section .itemCreate input{
+    width: 400px;
+    padding:6px;
+    margin-top: 5px;
+}
+footer{
+    display: flex;
+    margin-left: auto;
+    margin-right: 60px;
+}
+footer,
+#cancell,
+#create{
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+#cancell,
+#create{
+    background: blue;
+}
+footer,
+#cancell{
+    margin-right: 20%;
+}
