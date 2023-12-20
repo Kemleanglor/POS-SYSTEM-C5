@@ -205,24 +205,6 @@ main .category .table-item table td {
 main .category .table-item table tr:nth-child(even) {
     background: rgb(217, 218, 214);
 }
-<<<<<<< HEAD
-main .category .table-item table tr td i:nth-child(1){
-    color: red;
-    
-}
-main .category .table-item table tr td i:nth-child(2){
-    color: blue;
-    margin-left: 10px;
-    margin-right: 10px;
-    
-}
-main .category .table-item table tr td i:nth-child(3){
-    color: rgb(7, 124, 7);
-    
-}
-  
-=======
->>>>>>> fe31b647f168743d7dfa4b94eba53aeebdfef76b
 
 /* ---------daiolog------- */
 #category-dialog {
