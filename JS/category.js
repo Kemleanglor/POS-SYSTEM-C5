@@ -72,9 +72,9 @@ function renderCategory(){
     table.appendChild(newTbody);
 }
 
-
 //=======================Edit  and Remove Procduct==================
 function editCategory(event){
+
     let index = event.target.parentElement.parentElement.dataset.index;
     let categorys = CategoryData.category[index];
     document.getElementById("name").value=categorys.name;
@@ -92,8 +92,10 @@ function editCategory(event){
 
 function removeCategory(event){
     let index = event.target.parentElement.parentElement.dataset.index;
-
-    CategoryData.category.splice(index,1);
+    let ifConfirm = window.confirm("Are you sur you want to delete?");
+    if (ifConfirm){
+        CategoryData.category.splice(index,1);
+    }
 
     saveCategory();
 
@@ -103,7 +105,6 @@ function removeCategory(event){
 // ==================search============
 function searchCategory(){
     let trs = document.querySelectorAll("tbody tr");
-    // let search=btnSearch.value;
     for(let tr of trs){
         let title=tr.firstElementChild.nextElementSibling.textContent;
         if(title.toLowerCase().includes(btnSearch.value.toLowerCase())){
@@ -125,13 +126,17 @@ function OnCancel(){
 
 function OnAdd(){
     hid(dialog_catagory)
+    if(document.getElementById("name").value==="" || document.getElementById("dct").value==""){
+        alert("You need to fill all form!")
+        return;
+    };
 
     let categoryId = CategoryData.lastestId;
     if (categoryId === null || CategoryData.category.length === 0) {
         categoryId = 1;
     }
     else if (editIndex === null) {
-        categoryId= categoryId + 1
+        categoryId += 1
     }
     else  {
         categoryId = categoryId
