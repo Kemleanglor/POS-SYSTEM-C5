@@ -10,6 +10,8 @@ function loadOrder() {
     }
 }
 
+//===================== Total Price ===============================
+let toTalPrice =0;
 
 //===================================== Display items order to table =================
 function addItemOrder() {
@@ -64,6 +66,22 @@ function addItemOrder() {
     p_Quantity.textContent ="";
     p_Price.textContent ="";
     span.textContent ="";
+}
+
+//======================== remove order ===============================
+function removeOrder(event){
+    let index = event.target.parentElement.parentElement.dataset.index;
+
+    let isRemoved = window.confirm('Are you sure you want to remove it?');
+    if (isRemoved) {
+        orderData.order.splice(index,1);
+        // row.remove();
+    }
+    toTalPrice =0;
+
+    saveOrder();
+
+    addItemOrder();
 }
 
 //========================== Search ID of Products ==================
@@ -126,3 +144,4 @@ let orderData = {
 
 
 loadOrder()
+addItemOrder()
