@@ -66,6 +66,22 @@ function addItemOrder() {
     span.textContent ="";
 }
 
+//======================== remove order ===============================
+function removeOrder(event){
+    let index = event.target.parentElement.parentElement.dataset.index;
+
+    let isRemoved = window.confirm('Are you sure you want to remove it?');
+    if (isRemoved) {
+        orderData.order.splice(index,1);
+        // row.remove();
+    }
+    toTalPrice =0;
+
+    saveOrder();
+
+    addItemOrder();
+}
+
 //========================== Search ID of Products ==================
 function searchIdProduct() {
     let value_input = inputID.value;
